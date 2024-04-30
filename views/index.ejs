@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Home Page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <%if (status == "no") {%>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutbefore">About</a></li>
+                <%} else {%>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/learn">Learn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/test">Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/User">User</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutafter">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">logout</a></li>
+                <%}%>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/">Learn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Test</a>
+                  </li> -->
+                <!-- <li class="nav-item">
+                  <a class = "nav-link active" aria-current="page" href="#">Home</a>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/">Learn</a>
+                      <a class="dropdown-item" href="/">Test</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li> -->
+              </ul>
+            </div>
+            <!-- <span class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </span>
+              <span class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </span> -->
+          </nav>
+            <div class = "container my-5">
+                <div class="card" style="width: 100%">
+                    <div class="card-body">
+                        <%if (status == "no") {%>
+                            <h5 class="card-title">Discover a World of Learning</h5>
+                        <%} else {%>
+                            <h5 class="card-title">Welcome Back, <%= user.name%>! Ready to Learn More?</h5>
+                        <%}%>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">AI_powered Study Assistant</h6> -->
+                        <%if (status == "no") {%>
+                            <p class="card-text">Welcome to MindLeap! Step into a realm where learning is enhanced by artificial intelligence.
+                                Our AI-powered study assistant is designed to make your educational journey both efficient and captivating. Join us and transform the way you learn.</p>
+                            <button class="btn btn-primary"><a href = "/login" style = "color: white; text-decoration: none;">Login</a></button>
+                            <button class="btn btn-primary"><a href = "/register" style = "color: white; text-decoration: none;">Register</a></button>
+                        <%} else {%>
+                            <p class="card-text">Great to see you again! Continue your learning journey with MindLeap, where every session is a step forward in your academic pursuits.
+                                 Explore new topics, track your progress, and challenge yourself with new tests. Your AI-powered study assistant is ready to guide you to your next milestone.</p>
+                            <button class="btn btn-primary"><a href = "/learn" style = "color: white; text-decoration: none;">Learn</a></button>
+                            <button class="btn btn-primary"><a href = "/test" style = "color: white; text-decoration: none;">Test</a></button>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

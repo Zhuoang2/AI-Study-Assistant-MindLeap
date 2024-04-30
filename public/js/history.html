@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">History Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/learn">Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page"href="/learn">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/User">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/aboutafter">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Learn History Column -->
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                Learn History
+              </div>
+              <div class="card-body">
+                <ul id="learnHistoryList" class="list-group">
+                  <!-- 学习历史记录项将动态添加在这里 -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Test History Column -->
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                Test History
+              </div>
+              <div class="card-body">
+                <ul id="testHistoryList" class="list-group">
+                  <!-- 测试历史记录项将动态添加在这里 -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <script src = "js/history.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+</html>

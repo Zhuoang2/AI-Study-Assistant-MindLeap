@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">User Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/learn">Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/test">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/aboutafter">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>User Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="userID" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="userID" placeholder="Your ID" disabled>
+                            </div>
+
+                            <!-- Name -->
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="userName" placeholder="Enter your name">
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="Enter your email">
+                            </div>
+                            
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="userPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="userPassword" placeholder="Enter a new password">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="useradress" class="form-label">Address</label>
+                                <textarea class="form-control" id="useradress" rows="4" placeholder="Enter your address"></textarea>
+                            </div>
+                            
+                            <!-- Profile Textarea -->
+                            <div class="mb-3">
+                                <label for="userProfile" class="form-label">Profile</label>
+                                <textarea class="form-control" id="userProfile" rows="4" placeholder="Tell us something about yourself..."></textarea>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "js/User.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
