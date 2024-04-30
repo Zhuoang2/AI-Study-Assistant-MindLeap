@@ -2,11 +2,11 @@ const { OpenAI } = require('openai');
 const jwt = require('jsonwebtoken');
 const db = require("../routes/db-config");
 const mysql = require('mysql');
-const JWT_SECRET = process.env.JWT_SECRET;
-const OPENAI_SECRET = process.env.OPENAI_API_KEY;
+const JWT_API = process.env.JWT_SECRET;
+const OPENAI_API = process.env.OPENAI_API_KEY;
 
 const openai =  new OpenAI({
-    apiKey: OPENAI_SECRET,
+    apiKey: OPENAI_API,
 })
 
 function extracttest(input) {
@@ -41,7 +41,7 @@ const test = async (req, res) => {
             return res.sendStatus(401); // 没有token，返回401未授权
         }
 
-        jwt.verify(token, JWT_SECRET, (err, decoded) => {
+        jwt.verify(token, JWT_API, (err, decoded) => {
             if (err) {
                 return res.sendStatus(403); // token无效，返回403禁止
             }
