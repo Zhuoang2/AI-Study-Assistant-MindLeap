@@ -1,7 +1,6 @@
 const { OpenAI } = require('openai');
 const jwt = require('jsonwebtoken');
 const db = require("../routes/db-config");
-const mysql = require('mysql');
 const JWT_API = process.env.JWT_SECRET;
 const OPENAI_API = process.env.OPENAI_API_KEY;
 
