@@ -3,9 +3,10 @@ const jwt = require('jsonwebtoken');
 const db = require("../routes/db-config");
 const mysql = require('mysql');
 const JWT_SECRET = process.env.JWT_SECRET;
+const OPENAI_SECRET = process.env.OPENAI_API_KEY;
 
 const openai =  new OpenAI({
-    apiKey: "sk-proj-6SeKao6DwbNRzCo7c19TT3BlbkFJjj9QYkf0F5cWKHIjQIOT",
+    apiKey: OPENAI_SECRET,
 })
 
 function extractlearn(input) {
